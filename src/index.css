@@ -69,3 +69,20 @@
     @apply bg-background text-foreground;
   }
 }
+.day-unavailable {
+  position: relative;
+  color: #d32f2f !important;
+  opacity: 0.6;
+}
+
+.day-unavailable::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+  height: 2px;
+  background-color: #d32f2f;
+  transform: translateY(-50%);
+  border-radius: 1px;
+}

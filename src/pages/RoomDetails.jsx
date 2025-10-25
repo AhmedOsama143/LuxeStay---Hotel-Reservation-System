@@ -97,6 +97,17 @@ const RoomDetails = () => {
       navigate("/dashboard");
     }, 1500);
   };
+  const isUnavailable = (date) => {
+    return room.unavailableDates?.some((period) => {
+      const start = new Date(period.start);
+      const end = new Date(period.end);
+      const d = new Date(date);
+      d.setHours(0, 0, 0, 0);
+      start.setHours(0, 0, 0, 0);
+      end.setHours(23, 59, 59, 999);
+      return d >= start && d <= end;
+    });
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -213,7 +224,19 @@ const RoomDetails = () => {
                     mode="single"
                     selected={checkIn}
                     onSelect={setCheckIn}
-                    disabled={(date) => date < new Date() || !room.availability}
+                    disabled={(date) => {
+                      const today = new Date();
+                      if (date < today) return true;
+                      if (!room.availability) return true;
+                      if (isUnavailable(date)) return true;
+                      return false;
+                    }}
+                    modifiers={{
+                      unavailable: (date) => isUnavailable(date),
+                    }}
+                    modifiersClassNames={{
+                      unavailable: "day-unavailable",
+                    }}
                     className="rounded-md border"
                   />
                 </div>
@@ -224,9 +247,41 @@ const RoomDetails = () => {
                     mode="single"
                     selected={checkOut}
                     onSelect={setCheckOut}
-                    disabled={(date) =>
-                      !checkIn || date <= checkIn || !room.availability
-                    }
+                    disabled={(date) => {
+                      if (!checkIn) return true;
+                      if (date <= checkIn) return true;
+                      if (!room.availability) return true;
+                      if (
+                        room.unavailableDates?.some((period) => {
+                          const start = new Date(period.start);
+                          const end = new Date(period.end);
+                          const d = new Date(date);
+                          d.setHours(0, 0, 0, 0);
+                          start.setHours(0, 0, 0, 0);
+                          end.setHours(23, 59, 59, 999);
+                          return d >= start && d <= end;
+                        })
+                      ) {
+                        return true;
+                      }
+
+                      return false;
+                    }}
+                    modifiers={{
+                      unavailable: (date) =>
+                        room.unavailableDates?.some((period) => {
+                          const start = new Date(period.start);
+                          const end = new Date(period.end);
+                          const d = new Date(date);
+                          d.setHours(0, 0, 0, 0);
+                          start.setHours(0, 0, 0, 0);
+                          end.setHours(23, 59, 59, 999);
+                          return d >= start && d <= end;
+                        }),
+                    }}
+                    modifiersClassNames={{
+                      unavailable: "day-unavailable",
+                    }}
                     className="rounded-md border"
                   />
                 </div>

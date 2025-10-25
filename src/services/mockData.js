@@ -5,6 +5,10 @@ export const mockRooms = [
     typeId: "Double Room",
     pricePerNight: 499,
     availability: true,
+    unavailableDates: [
+      { start: "2025-10-31", end: "2025-11-09" },
+      { start: "2025-11-02", end: "2025-11-05" },
+    ],
     description:
       "Spacious Double Room with panoramic city views, king-size bed, and separate living area. Perfect for luxury travelers.",
     amenities: [
@@ -30,6 +34,10 @@ export const mockRooms = [
     typeId: "Single Room",
     pricePerNight: 199,
     availability: true,
+    unavailableDates: [
+      { start: "2025-10-31", end: "2025-11-09" },
+      { start: "2025-11-26", end: "2025-12-05" },
+    ],
     description:
       "Comfortable Single Room with modern amenities and cozy atmosphere. Ideal for business or leisure travelers.",
     amenities: ["Queen Bed", "Free WiFi", "Coffee Maker", "Smart TV"],
@@ -48,6 +56,10 @@ export const mockRooms = [
     typeId: "Suite",
     pricePerNight: 699,
     availability: true,
+    unavailableDates: [
+      { start: "2025-10-31", end: "2025-11-09" },
+      { start: "2025-11-26", end: "2025-12-05" },
+    ],
     description:
       "Luxurious Suite featuring a private balcony, jacuzzi, and premium furnishings. Experience ultimate comfort.",
     amenities: [
@@ -74,6 +86,10 @@ export const mockRooms = [
     typeId: "Suite",
     pricePerNight: 399,
     availability: true,
+    unavailableDates: [
+      { start: "2025-10-31", end: "2025-11-09" },
+      { start: "2025-11-26", end: "2025-12-05" },
+    ],
     description:
       "Spacious Suite with two queen beds and extra space for children. Perfect for family vacations.",
     amenities: [
@@ -124,6 +140,10 @@ export const mockRooms = [
     typeId: "Single Room",
     pricePerNight: 299,
     availability: true,
+    unavailableDates: [
+      { start: "2025-10-31", end: "2025-11-09" },
+      { start: "2025-11-26", end: "2025-12-05" },
+    ],
     description:
       "Modern Single Room with garden view and contemporary design. Great value for comfort seekers.",
     amenities: ["Queen Bed", "Garden View", "Free WiFi", "Smart TV"],
@@ -142,6 +162,10 @@ export const mockRooms = [
     typeId: "Double Room",
     pricePerNight: 429,
     availability: true,
+    unavailableDates: [
+      { start: "2025-10-31", end: "2025-11-09" },
+      { start: "2025-11-26", end: "2025-12-05" },
+    ],
     description:
       "Elegant Double Room with ocean view and upscale amenities. Relax in sophisticated style.",
     amenities: [
@@ -192,6 +216,10 @@ export const mockRooms = [
     typeId: "Single Room",
     pricePerNight: 219,
     availability: true,
+    unavailableDates: [
+      { start: "2025-10-31", end: "2025-11-09" },
+      { start: "2025-11-26", end: "2025-12-05" },
+    ],
     description:
       "Cozy Single Room with all essential amenities at an affordable rate. Smart choice for budget-conscious travelers.",
     amenities: ["Full Bed", "Free WiFi", "TV", "Coffee Maker"],
@@ -210,6 +238,10 @@ export const mockRooms = [
     typeId: "Suite",
     pricePerNight: 829,
     availability: true,
+    unavailableDates: [
+      { start: "2025-10-31", end: "2025-11-09" },
+      { start: "2025-11-26", end: "2025-12-05" },
+    ],
     description:
       "Large Suite with connecting door option and kid-friendly amenities. Family comfort guaranteed.",
     amenities: [
@@ -234,6 +266,10 @@ export const mockRooms = [
     typeId: "Double Room",
     pricePerNight: 349,
     availability: true,
+    unavailableDates: [
+      { start: "2025-10-31", end: "2025-11-09" },
+      { start: "2025-11-26", end: "2025-12-05" },
+    ],
     description:
       "Sophisticated Double Room with marble bathroom and premium bedding. Indulge in refined luxury.",
     amenities: [
@@ -259,6 +295,10 @@ export const mockRooms = [
     typeId: "Suite",
     pricePerNight: 999,
     availability: true,
+    unavailableDates: [
+      { start: "2025-10-31", end: "2025-11-09" },
+      { start: "2025-11-26", end: "2025-12-05" },
+    ],
     description:
       "Exclusive Suite with private lounge access and personalized concierge service. Excellence redefined.",
     amenities: [
