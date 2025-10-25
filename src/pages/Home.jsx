@@ -71,9 +71,7 @@ const Home = () => {
 
           <div className="lg:col-span-3" id="rooms">
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-3xl font-bold text-foreground">
-                Available Rooms
-              </h2>
+              <h2 className="text-3xl font-bold text-foreground">All Rooms</h2>
               <p className="text-muted-foreground">
                 {filteredRooms.length}{" "}
                 {filteredRooms.length === 1 ? "room" : "rooms"} found
