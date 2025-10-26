@@ -77,7 +77,6 @@ The authentication system is mock-based using localStorage:
 - User data persists across browser sessions
 - Suitable for demonstration and development purposes
 
-**Production Note**: Replace with a real authentication service (e.g., Firebase Auth, Auth0, or custom backend) before deploying to production.
 
 ## 💾 Data Persistence
 
@@ -113,10 +112,6 @@ The authentication system is mock-based using localStorage:
 - Grid layouts on larger screens
 
 ## 🚀 Deployment
-
-## 🤝 Contributing
-
-This is a demonstration project, but suggestions and improvements are welcome!
 
 ## 🎬 Demo Instructions
 
