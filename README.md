@@ -23,25 +23,25 @@ A modern, responsive hotel reservation system built with React, Redux Toolkit, a
 src/
 ├── components/          # Reusable UI components
 │   ├── ui/             # shadcn/ui components
-│   ├── Navbar.tsx      # Navigation bar
-│   ├── RoomCard.tsx    # Room card component
-│   └── RoomFilters.tsx # Filtering sidebar
+│   ├── Navbar.jsx      # Navigation bar
+│   ├── RoomCard.jsx    # Room card component
+│   └── RoomFilters.jsx # Filtering sidebar
 ├── pages/              # Page components
-│   ├── Home.tsx        # Landing page with room list
-│   ├── RoomDetails.tsx # Individual room details
-│   ├── Login.tsx       # Login page
-│   ├── Signup.tsx      # Registration page
-│   └── Dashboard.tsx   # User dashboard
+│   ├── Home.jsx        # Landing page with room list
+│   ├── RoomDetails.jsx # Individual room details
+│   ├── Login.jsx       # Login page
+│   ├── Signup.jsx      # Registration page
+│   └── Dashboard.jsx   # User dashboard
 ├── store/              # Redux store configuration
-│   ├── store.ts        # Store setup
+│   ├── store.js        # Store setup
 │   └── slices/         # Redux slices
-│       ├── authSlice.ts
-│       ├── roomsSlice.ts
-│       └── reservationsSlice.ts
+│       ├── authSlice.js
+│       ├── roomsSlice.js
+│       └── reservationsSlice.js
 ├── services/           # Mock data and API services
-│   └── mockData.ts     # Sample room data
-├── App.tsx             # Main app component
-└── main.tsx           # Application entry point
+│   └── mockData.js     # Sample room data
+├── App.jsx             # Main app component
+└── main.jsx           # Application entry point
 ```
 
 ## 📖 Usage Guide
